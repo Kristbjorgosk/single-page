@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/weather/weather.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
+    <title>Single page</title>
+</head>
+<body>
+    <main>
+        <div class="page active" id="home">
+            <div class="sidenav" id="mySidenav">
+                <a href="#" id="frontpage" data-target="home" class="nav-link">HOME</a>
+                <a href="#" id="gallery" data-target="list" class="nav-link">Gallery</a>
+                <a href="#" id="localstorage" data-target="detail" class="nav-link">localstorage</a>
+                <div class="main-content">
+                    <h1>Hey you!</h1>
+                    <p>Welcome to my single page webstite</p>
+                    <p>I was playing around with API and local storage so there are some random things here</p>
+                    <p>-</p>
+                    <p>In the menu on the left (hover over to see it) you can check out <br /> 
+                        the photo gallery where you can upload your own photo and <br />it will be stored in a local storage</p>
+                        <p> If you go in the local storage you can create and save your own data</p>
+                        <p>Oh and yea here you have the weather forcest for today</p>
+                    <div class="container">
+                        <div class="app-title">
+                          <p>Weather</p>
+                        </div>
+                        <div class="notification"></div>
+                        <div class="weather-container">
+                          <div class="weather-icon">
+                            <img src="/weather/icons/unknown.png" alt="" />
+                          </div>
+                          <div class="temperature-value">
+                            <p>- °<span>C</span></p>
+                          </div>
+                          <div class="temperature-description">
+                            <p>-</p>
+                          </div>
+                          <div class="location">
+                            <p>-</p>
+                          </div>
+                        </div>
+                      </div> 
+                </div>
+            </div>
+        </div>
+
+        <div class="page" id="list">
+            <div class="sidenav" id="mySidenav">
+                <a href="#" id="frontpage" data-target="home" class="nav-link">HOME</a>
+                <a href="#" id="gallery" data-target="list" class="nav-link">Gallery</a>
+                <a href="#" id="localstorage" data-target="detail" class="nav-link">locals torage</a>
+            </div>
+            <div class="main-content">
+                <h1>Photo Gallery</h1>
+                <p>Hey here are some nice photos</p>
+                <p>Upload your own photo --> <input type="file" id="myFileInput"></p>
+                
+                <img class="img-upload" id="imgPreview" src="" alt="preview">
+
+                <div class="column">
+                    <img src="img/fall-3.jpg">
+                    <img src="img/summer-1.png">
+                    <img src="img/winter-2.jpg">
+                    <img src="img/fall-2.jpg">
+                </div>
+                <div class="column">
+                    <img src="img/winter-1.jpg">
+                    <img src="img/spring-1.jpg">
+                    <img src="img/summer-1.jpg">
+                    <img src="img/flowers.jpg">
+                </div>
+            </div>
+        </div>
+
+        <div class="page" id="detail">
+            <div class="sidenav" id="mySidenav">
+                <a href="#" id="frontpage" data-target="home" class="nav-link">HOME</a>
+                <a href="#" id="gallery" data-target="list" class="nav-link">Gallery</a>
+                <a href="#" id="localstorage" data-target="detail" class="nav-link">Local storage</a>
+            </div>
+            <div class="main-content">
+                <h1 id="title">Local storage</h1>
+                <p>Here is an example of a local storage</p>
+                <p>You choose what kind of information you want to store</p>
+                <p>if it is a name then you write "name" in the first input box and in the second one you write the
+                    name.</p>
+                <p>Or if you want to store countires then you write "country" and then "Iceland"</p>
+
+                <fieldset>
+                    <legend>Insert Data</legend>
+                    <input id="inpKey" type="text" placeholder="Country..">
+                    <input id="inpValue" type="text" placeholder="Iceland..">
+                    <button type="button" id="btnInsert">Insert Data</button>
+                </fieldset>
+                <fieldset>
+                    <legend>Local storage</legend>
+                    <div id="lsOutput">
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+        </div>
+
+    </main>
+    <script src="main.js"></script>
+    <script src="/weather/weather.js"></script>
+</body>
+
+</html>

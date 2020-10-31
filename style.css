@@ -1,0 +1,117 @@
+/* ------------------------------------------------------- */
+
+/* the pages will be displayed none and the below I overwrite this */
+.page {
+    display: none;
+    width: 100%;
+    min-height: 100%;
+    position: absolute;
+    /* fixed because the content small and not "scrollable" */
+    padding: 1rem 2rem;
+}
+
+/* the page that is active (through js) will dispaly block */
+.active {
+    display: flex;
+}
+
+/* ------------------------------------------------------- */
+
+/* the side navbar */
+#mySidenav a {
+    position: absolute;
+    /* Position them relative to the browser window */
+    left: -80px;
+    /* Position them outside of the screen */
+    transition: 0.3s;
+    /* Add transition on hover */
+    padding: 15px;
+    /* 15px padding */
+    width: 120px;
+    /* Set a specific width */
+    text-decoration: none;
+    /* Remove underline */
+    font-size: 20px;
+    /* Increase font size */
+    color: white;
+    /* White text color */
+    border-radius: 0 5px 5px 0;
+    /* Rounded corners on the top right and bottom right side */
+    font-family: 'Syne Mono', monospace;
+    ;
+}
+
+#mySidenav a:hover {
+    left: 0;
+    /* On mouse-over, make the elements appear as they should */
+}
+
+/* ------------------------------------------------------- */
+
+/* The frontpage link: 20px from the top */
+#frontpage {
+    top: 20px;
+    background-color: #ac8380;
+}
+
+#gallery {
+    top: 80px;
+    background-color: #ac8380;
+}
+
+#localstorage {
+    top: 140px;
+    background-color: #ac8380;
+}
+
+/* ------------------------------------------------------- */
+
+/* styles that are relivent for all pages  */
+.main-content {
+    margin-left: 80px;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: 'Syne Mono', monospace;
+}
+
+p {
+    font-family: 'Syne Mono', monospace;
+}
+
+/* ------------------------------------------------------- */
+
+/*  photo gallery  */
+.column img {
+    display: inline-flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    margin-top: 8px;
+    vertical-align: middle;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.img-upload {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+/* ------------------------------------------------------- */
+
+/* styles for the local storage box */
+input {
+    padding: 7px;
+    height: 40px;
+}
+
+button {
+    padding: 7px;
+    height: 40px;
+}
+
+fieldset {
+    margin-bottom: 20px;
+}
