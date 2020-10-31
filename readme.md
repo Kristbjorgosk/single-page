@@ -1,4 +1,4 @@
-#Single page and API assignment
+# Single page and API assignment
 
 I started by creating the weather forcest container and created an API key to be able
 to get a geolocation data from the visitor (it works best in chrome)
